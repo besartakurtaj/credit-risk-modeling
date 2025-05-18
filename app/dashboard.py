@@ -2,18 +2,16 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-"""
-dashboard.py
+st.set_page_config(layout="wide")
 
+"""
 Streamlit dashboard for visualizing credit risk metrics such as ECL by credit score band, PD vs EAD, and key portfolio KPIs.
 Uses cleaned and enriched data from previous steps.
 """
 
-
 # Load data
 df = pd.read_csv('../data/final_dashboard_data.csv')
 
-st.set_page_config(layout="wide")
 st.title("Credit Risk Modeling Dashboard")
 
 # Sidebar filters
